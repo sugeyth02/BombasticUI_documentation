@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { theme } from './Theme';
+import { theme } from './theme';
 
 export const PrimaryTitle = styled.h1`
    font-family: 'Montserrat';
