@@ -13,12 +13,14 @@ export const PrimaryTitle = styled.h1`
     //TODO
    }
 `
-export const Logo = styled.h1`
+export const Logo = styled.a`
     font-family: 'Montserrat';
+    text-decoration: none;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
+    color: ${theme.colors.white};
     span {
        font-weight: 400; 
     }
@@ -97,6 +99,9 @@ export const NavigationTag = styled.a`
     font-size: 20px;
     line-height: 24px;
     color: ${theme.colors.white};
+    &:hover{
+      cursor: pointer;
+    }
     @media (max-width: ${theme.breakpoints.lg}) {
        //TODO
    }

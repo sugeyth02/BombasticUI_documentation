@@ -10,7 +10,7 @@ export const PrimaryButton = styled.button`
  box-shadow: 1px 1px 4px 1px ${theme.colors.yellow};;
  font-family: 'Roboto';
  font-style: normal;
- font-weight: 400;
+ font-weight: 600;
  font-size: 20px;
  line-height: 23px;
  letter-spacing: 0.1em;
@@ -18,5 +18,6 @@ export const PrimaryButton = styled.button`
  text-decoration: none;
  &:hover{
     cursor: pointer;
+     border: 1.5px solid ${theme.colors.yellow};
  }
 `
