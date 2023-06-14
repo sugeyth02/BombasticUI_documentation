@@ -14,7 +14,7 @@ export const PrimaryButton = styled.button`
  font-size: 20px;
  line-height: 23px;
  letter-spacing: 0.1em;
- padding: 14px 19px;
+ padding: 12px 19px;
  text-decoration: none;
  &:hover{
     cursor: pointer;

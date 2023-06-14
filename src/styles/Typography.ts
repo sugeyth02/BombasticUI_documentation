@@ -91,16 +91,17 @@ export const Tag = styled.a`
        //TODO
    }
 `
-export const NavigationTag = styled.a`
+export const NavigationTag = styled.a < {active: boolean} >`
     font-family: 'Montserrat';
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    color: ${theme.colors.white};
+    color: ${({ active }) => (active ? theme.colors.yellow : theme.colors.white)};
     &:hover{
       cursor: pointer;
+      color: ${theme.colors.yellow};
     }
     @media (max-width: ${theme.breakpoints.lg}) {
        //TODO

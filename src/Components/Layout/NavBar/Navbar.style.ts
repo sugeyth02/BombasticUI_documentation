@@ -19,6 +19,7 @@ justify-content: space-between;
      }
       &:hover{
       cursor: pointer;
+      
     }
 }
 .navigation{
