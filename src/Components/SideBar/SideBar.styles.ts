@@ -2,9 +2,12 @@ import { styled } from 'styled-components';
 import { theme } from '../../styles/theme';
 
 export const SideBarWrapper = styled.div`
-overflow-y: scroll;
+overflow: hidden;
+position: sticky;
+z-index: 1;
+top:103px;
 background-color: ${theme.colors.lightBlack};
-height: calc(100vh - 204px);
+height: calc(100vh - 103px);
 width: 20vw;
 min-width: 120px;
 display: flex;
@@ -21,9 +24,12 @@ padding: 0 24px;
         gap:16px;
     }
 }
+&:hover {
+  overflow-y: scroll;
+}
 &::-webkit-scrollbar
 {
-	width: 4px;
+	width: 3px;
 	background-color: ${theme.colors.black};
 }
 &::-webkit-scrollbar-thumb {

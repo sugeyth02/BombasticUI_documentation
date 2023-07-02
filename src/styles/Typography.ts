@@ -71,14 +71,14 @@ export const Paragraph = styled.p`
    }
 `
 
-export const SectionTitle = styled.a`
+export const SectionTitle = styled.a<{ $active?: boolean } >`
     font-family: 'Montserrat';
     text-decoration: none;
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: ${theme.colors.white};
+    color: ${({ $active }) => ($active ? theme.colors.yellow : theme.colors.white)};
     @media (max-width: ${theme.breakpoints.sm}) {
           font-size: 20px;
        //TODO
@@ -88,14 +88,14 @@ export const SectionTitle = styled.a`
       color: ${theme.colors.yellow};
     }
 `
-export const Tag = styled.a`
+export const Tag = styled.a<{ $active?: boolean } >`
     font-family: 'Montserrat';
     text-decoration: none;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    color: ${theme.colors.white};
+    color: ${({ $active }) => ($active ? theme.colors.yellow : theme.colors.white)};
    &:hover{
       cursor: pointer;
       color: ${theme.colors.yellow};

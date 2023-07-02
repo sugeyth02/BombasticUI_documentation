@@ -6,11 +6,11 @@ import { useLocation } from 'react-router-dom'
 import HamburgerMenu from './HamburgerMenu/HamburgerMenu'
 import DropDownMenu from './DropDownMenu/DropDownMenu'
 
-const Navbar = () => {
+const Navbar = ({transparent}) => {
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = React.useState(false);
   return (
-    <NavbarContainer>
+    <NavbarContainer $transparent={transparent}>
       <a className='logo' href='/'>
         <img src={BombasticLogo} alt="logo" />
         <Logo>OMBASTIC <span>UI</span></Logo>

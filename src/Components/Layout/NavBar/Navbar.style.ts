@@ -1,8 +1,12 @@
 import { styled } from 'styled-components';
 import { theme } from '../../../styles/theme';
 
-export const NavbarContainer = styled.div`
-  background-color: transparent;
+export const NavbarContainer = styled.div<{$transparent:boolean}>`
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: ${({ $transparent }) => ($transparent ? 'transparent' : theme.colors.black)};;
   padding: 20px 40px;
   display: flex;
   align-items: center;

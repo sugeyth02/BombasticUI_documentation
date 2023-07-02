@@ -8,7 +8,7 @@ import Navbar from '../../Components/Layout/NavBar/Navbar'
 const HomePage = () => {
   return (
     <HomeContainer>
-      <Navbar />
+      <Navbar transparent  />
       <div className='content'>
         <PrimaryTitle>Why Settle for Ordinary When You Can Go <span>Bombastic</span>?</PrimaryTitle>
         <PrimaryButton as='a' href='/documentation'>Get started <img src={arrow} alt="arrow icon" /></PrimaryButton>

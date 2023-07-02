@@ -7,7 +7,7 @@ const Documentation = () => {
   return (
     <Layout>
       <DocumentationWrapper>
-        <SideBar/>
+        <SideBar />
       </DocumentationWrapper>
       
     </Layout>
