@@ -20,4 +20,7 @@ export const PrimaryButton = styled.button`
     cursor: pointer;
      border: 1.5px solid ${theme.colors.yellow};
  }
+ @media (max-width: ${theme.breakpoints.sm}) {
+    font-size: 16px;
+   }
 `

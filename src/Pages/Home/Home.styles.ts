@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import { theme } from '../../styles/theme';
 
 export const HomeContainer = styled.div`
 overflow: hidden;
@@ -14,6 +15,7 @@ background: radial-gradient(130.88% 52.39% at 50.87% 47.61%, #3C3169 5.33%, rgba
     }
 
     a{
+        margin-top: 80px;
         display: flex;
         align-items: center;
         gap:12px;
@@ -24,5 +26,23 @@ background: radial-gradient(130.88% 52.39% at 50.87% 47.61%, #3C3169 5.33%, rgba
         }
     }
 }
+ @media (max-width: ${theme.breakpoints.lg}) {
+     .content{
+        padding: 0 24px;
+     }
 
+
+ }
+  @media (max-width: ${theme.breakpoints.sm}) {
+    .content{
+        margin-top: 120px;
+        a{
+            img{
+                width: 24px;
+                height: 34px;
+            }
+        }
+    }
+       
+   }
 `

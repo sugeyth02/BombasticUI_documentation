@@ -9,13 +9,17 @@ export const PrimaryTitle = styled.h1`
    line-height: 78px;
    letter-spacing: 0.05em;
    color: ${theme.colors.white};
-   @media (max-width: ${theme.breakpoints.lg}) {
-    //TODO
+   span{
+      border-bottom: 2px solid ${theme.colors.yellow};
+      box-shadow:  0 2.5px 2px -2px ${theme.colors.yellow};
+   }
+   @media (max-width: ${theme.breakpoints.sm}) {
+    font-size: 44px;
+    line-height: 58px;
    }
 `
-export const Logo = styled.a`
+export const Logo = styled.p`
     font-family: 'Montserrat';
-    text-decoration: none;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -25,8 +29,8 @@ export const Logo = styled.a`
        font-weight: 400; 
     }
 
-    @media (max-width: ${theme.breakpoints.lg}) {
-    //TODO
+    @media (max-width: ${theme.breakpoints.sm}) {
+      display: none;
    }
 
 `
@@ -91,7 +95,7 @@ export const Tag = styled.a`
        //TODO
    }
 `
-export const NavigationTag = styled.a < {active: boolean} >`
+export const NavigationTag = styled.a < { active?: boolean } >`
     font-family: 'Montserrat';
     text-decoration: none;
     font-style: normal;
@@ -103,7 +107,7 @@ export const NavigationTag = styled.a < {active: boolean} >`
       cursor: pointer;
       color: ${theme.colors.yellow};
     }
-    @media (max-width: ${theme.breakpoints.lg}) {
-       //TODO
+    @media (max-width: ${theme.breakpoints.sm}) {
+       font-size: 16px;
    }
 `

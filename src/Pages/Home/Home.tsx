@@ -10,7 +10,7 @@ const HomePage = () => {
     <HomeContainer>
       <Navbar />
       <div className='content'>
-        <PrimaryTitle>Why Settle for Ordinary When You Can Go Bombastic?</PrimaryTitle>
+        <PrimaryTitle>Why Settle for Ordinary When You Can Go <span>Bombastic</span>?</PrimaryTitle>
         <PrimaryButton as='a' href='/documentation'>Get started <img src={arrow} alt="arrow icon" /></PrimaryButton>
       </div>
     </HomeContainer>
