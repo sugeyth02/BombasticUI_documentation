@@ -31,4 +31,7 @@ padding: 0 24px;
   border-radius: 5px;
 }
 
+@media (max-width: ${theme.breakpoints.sm}) {
+ display: none;
+}
 `

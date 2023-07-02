@@ -79,7 +79,8 @@ export const SectionTitle = styled.a`
     font-size: 20px;
     line-height: 24px;
     color: ${theme.colors.white};
-    @media (max-width: ${theme.breakpoints.lg}) {
+    @media (max-width: ${theme.breakpoints.sm}) {
+          font-size: 20px;
        //TODO
    }
    &:hover{
@@ -99,8 +100,8 @@ export const Tag = styled.a`
       cursor: pointer;
       color: ${theme.colors.yellow};
     }
-    @media (max-width: ${theme.breakpoints.lg}) {
-       //TODO
+    @media (max-width: ${theme.breakpoints.sm}) {
+          font-size: 16px;
    }
 `
 export const NavigationTag = styled.a < { active?: boolean } >`
@@ -116,6 +117,6 @@ export const NavigationTag = styled.a < { active?: boolean } >`
       color: ${theme.colors.yellow};
     }
     @media (max-width: ${theme.breakpoints.sm}) {
-       font-size: 16px;
+       font-size: 20px;
    }
 `

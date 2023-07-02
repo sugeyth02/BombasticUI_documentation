@@ -6,15 +6,14 @@ import { data } from './Data'
 const SideBar = () => {
   return (
       <SideBarWrapper>
-          {data.map((section) => <div className='section'>
-              <SectionTitle>{section.title}</SectionTitle>
+          {data.map((section) => <div className='section' key={section.title}>
+              <SectionTitle href={`#${section.title}`}>{section.title}</SectionTitle>
               <div className='options'>
                   {section.elements.map((element) =>
-                      <Tag>{element}</Tag>
+                      <Tag href={`#${element}`} key={element}>{element}</Tag>
                   )}
               </div>
           </div>)}
-          
     </SideBarWrapper>
   )
 }
