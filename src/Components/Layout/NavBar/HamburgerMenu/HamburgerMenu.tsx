@@ -11,7 +11,7 @@ const HamburgerMenu = ({ isOpen, setIsOpen }: HamburgerMenuProps) => {
       <HamburgerButton
           type="button"
           onClick={() => setIsOpen(!isOpen)}
-          isOpen={isOpen}
+          $isOpen={isOpen}
           aria-label={isOpen ? 'Close Menu' : 'Open Menu'}
       >
           <span />

@@ -16,8 +16,8 @@ const Navbar = () => {
         <Logo>OMBASTIC <span>UI</span></Logo>
       </a>
       <div className='navigation'>
-        <NavigationTag active={pathname === '/documentation'} href='/documentation'>Documentation</NavigationTag>
-        <NavigationTag active={pathname === '/about-us'} href='/about-us'>About us</NavigationTag>
+        <NavigationTag $active={pathname === '/documentation'} href='/documentation'>Documentation</NavigationTag>
+        <NavigationTag $active={pathname === '/about-us'} href='/about-us'>About us</NavigationTag>
       </div>
       <div className='navigation-mobile'>
         <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />

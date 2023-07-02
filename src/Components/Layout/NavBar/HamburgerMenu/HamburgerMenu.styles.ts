@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 import { theme } from '../../../../styles/theme';
 
-export const HamburgerButton = styled.button<{ isOpen: boolean }>`
+export const HamburgerButton = styled.button<{ $isOpen: boolean }>`
   cursor: pointer;
   display: none;
   background: unset;
@@ -17,17 +17,17 @@ export const HamburgerButton = styled.button<{ isOpen: boolean }>`
     margin: 5px 0;
   }
   span:nth-child(1) {
-    transform: ${({ isOpen }) =>
-        isOpen
+    transform: ${({ $isOpen }) =>
+        $isOpen
             ? 'rotate(45deg)  translateX(5px) translateY(6px)'
             : 'rotate(0deg)'};
   }
   span:nth-child(2) {
-    opacity: ${({ isOpen }) => (isOpen ? '0' : '1')};
+    opacity: ${({ $isOpen }) => ($isOpen ? '0' : '1')};
   }
   span:nth-child(3) {
-    transform: ${({ isOpen }) =>
-        isOpen
+    transform: ${({ $isOpen }) =>
+        $isOpen
             ? 'rotate(-45deg)  translateX(5px) translateY(-6px)'
             : 'rotate(0deg)'};
   }

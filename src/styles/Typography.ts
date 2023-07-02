@@ -104,14 +104,14 @@ export const Tag = styled.a`
           font-size: 16px;
    }
 `
-export const NavigationTag = styled.a < { active?: boolean } >`
+export const NavigationTag = styled.a <{ $active?: boolean } >`
     font-family: 'Montserrat';
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    color: ${({ active }) => (active ? theme.colors.yellow : theme.colors.white)};
+    color: ${({ $active }) => ($active ? theme.colors.yellow : theme.colors.white)};
     &:hover{
       cursor: pointer;
       color: ${theme.colors.yellow};

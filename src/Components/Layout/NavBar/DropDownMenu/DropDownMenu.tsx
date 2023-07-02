@@ -10,7 +10,7 @@ interface DropdownMenuProps {
 
 const DropDownMenu = ({ isOpen }: DropdownMenuProps) => {
     return (
-        <DropdownMenuContainer isOpen={isOpen}>
+        <DropdownMenuContainer $isOpen={isOpen}>
             <div className='content'>
                 <NavigationTag href='/documentation'>Documentation</NavigationTag>
                 <div className='documentation'>

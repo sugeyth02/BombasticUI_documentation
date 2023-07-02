@@ -1,11 +1,11 @@
 import { styled } from 'styled-components';
 import { theme } from '../../../../styles/theme';
 
-export const DropdownMenuContainer = styled.div<{ isOpen: boolean }>`
+export const DropdownMenuContainer = styled.div<{ $isOpen: boolean }>`
   position: absolute;
   overflow: hidden;
   top: 83px;
-  left: ${({ isOpen }) => (isOpen ? '0' : '-100vw')};
+  left: ${({ $isOpen }) => ($isOpen ? '0' : '-100vw')};
   z-index: 1;
   height: calc(100vh - 83px);
   width: 100vw;
