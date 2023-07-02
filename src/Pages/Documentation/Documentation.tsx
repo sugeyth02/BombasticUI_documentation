@@ -1,10 +1,15 @@
 import React from 'react'
 import Layout from '../../Components/Layout/Layout'
+import { DocumentationWrapper } from './Documentation.styles'
+import SideBar from '../../Components/SideBar/SideBar'
 
 const Documentation = () => {
   return (
     <Layout>
-      <h1>Documentation</h1>
+      <DocumentationWrapper>
+        <SideBar/>
+      </DocumentationWrapper>
+      
     </Layout>
   )
 }

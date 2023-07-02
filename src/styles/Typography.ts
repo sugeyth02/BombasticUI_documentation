@@ -82,6 +82,10 @@ export const SectionTitle = styled.a`
     @media (max-width: ${theme.breakpoints.lg}) {
        //TODO
    }
+   &:hover{
+      cursor: pointer;
+      color: ${theme.colors.yellow};
+    }
 `
 export const Tag = styled.a`
     font-family: 'Montserrat';
@@ -91,6 +95,10 @@ export const Tag = styled.a`
     font-size: 20px;
     line-height: 24px;
     color: ${theme.colors.white};
+   &:hover{
+      cursor: pointer;
+      color: ${theme.colors.yellow};
+    }
     @media (max-width: ${theme.breakpoints.lg}) {
        //TODO
    }
