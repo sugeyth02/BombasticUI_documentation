@@ -1,7 +1,8 @@
 import React from 'react'
 import { SideBarWrapper } from './SideBar.styles'
 import { SectionTitle, Tag } from '../../styles/Typography'
-import { data } from './Data'
+import { data } from '../../Data/ComponentsNavigation'
+
 
 const SideBar = () => {
   return (

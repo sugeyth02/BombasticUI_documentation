@@ -1,7 +1,8 @@
 import React from 'react'
 import { DropdownMenuContainer } from './DropDownMenu.styles'
 import { NavigationTag, SectionTitle, Tag } from '../../../../styles/Typography';
-import { data } from '../../../SideBar/Data';
+import { data } from '../../../../Data/ComponentsNavigation';
+
 
 interface DropdownMenuProps {
     isOpen: boolean;
