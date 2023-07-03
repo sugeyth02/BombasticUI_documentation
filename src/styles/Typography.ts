@@ -55,7 +55,7 @@ export const Title = styled.h1`
     color: ${theme.colors.white};
 
     @media (max-width: ${theme.breakpoints.lg}) {
-    //TODO
+    font-size: 28px;
    }
 `
 export const Paragraph = styled.p`
@@ -67,7 +67,7 @@ export const Paragraph = styled.p`
     color: ${theme.colors.white};
 
   @media (max-width: ${theme.breakpoints.lg}) {
-    //TODO
+    font-size: 16px;
    }
 `
 

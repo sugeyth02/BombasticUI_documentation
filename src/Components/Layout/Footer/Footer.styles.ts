@@ -24,6 +24,7 @@ export const FooterWrapper = styled.div`
   @media (max-width: ${theme.breakpoints.sm}) {
     flex-direction: column;
     gap: 16px;
+    padding: 16px 40px;
 
     img {
       height: 73px;

@@ -1,14 +1,32 @@
-import React from 'react'
-import { AboutUsWrapper } from './AboutUs.styles'
-import Layout from '../../Components/Layout/Layout'
-
+import React from 'react';
+import { AboutUsWrapper } from './AboutUs.styles';
+import Layout from '../../Components/Layout/Layout';
+import people from './../../assets/img/people.png';
+import { Paragraph, Title } from '../../styles/Typography';
 const AboutUs = () => {
-    return (
-        <Layout>
-            <AboutUsWrapper>AboutUs</AboutUsWrapper>
-      </Layout>
-    
-  )
-}
+  return (
+    <Layout>
+      <AboutUsWrapper>
+        <div className='content'>
+          <Title>Who we are?</Title>
+          <Paragraph>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged Lorem Ipsum is simply dummy text of
+            the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type
+            specimen book. It has survived not only five centuries, but also the
+            leap into electronic typesetting, remaining essentially unchanged.
+          </Paragraph>
+        </div>
+        <img src={people} />
+      </AboutUsWrapper>
+    </Layout>
+  );
+};
 
-export default AboutUs
+export default AboutUs;
