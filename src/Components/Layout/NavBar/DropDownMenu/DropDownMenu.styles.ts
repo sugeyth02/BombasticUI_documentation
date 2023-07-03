@@ -7,8 +7,7 @@ export const DropdownMenuContainer = styled.div<{ $isOpen: boolean }>`
   top: 83px;
   left: ${({ $isOpen }) => ($isOpen ? '0' : '-100vw')};
   z-index: 1;
-  height: 100vh;
-  min-height: -webkit-fill-available;
+  height: calc(100vh - 83px);
   width: 100vw;
   background-color: ${theme.colors.black};
   display: flex;
@@ -18,11 +17,12 @@ export const DropdownMenuContainer = styled.div<{ $isOpen: boolean }>`
   justify-content: center;
   transition: all 0.5s ease-in-out;
   .content {
-    height: 100vh;
+    padding: 24px 0;
+    padding-bottom: 80px;
+    height: max-content;
     overflow-y: scroll;
     width: 100%;
     display: flex;
-    padding: 24px 0;
     flex-direction: column;
     align-items: center;
     gap:24px;
