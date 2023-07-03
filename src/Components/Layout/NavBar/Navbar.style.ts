@@ -50,7 +50,7 @@ export const NavbarContainer = styled.div<{$transparent:boolean}>`
     }
 
     .navigation-mobile {
-      display: block;
+      display: ${({ $transparent }) => ($transparent ? 'none' : `block`)};
     }
   }
 `;
