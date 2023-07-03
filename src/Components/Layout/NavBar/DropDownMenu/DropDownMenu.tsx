@@ -6,9 +6,10 @@ import { data } from '../../../../Data/ComponentsNavigation';
 
 interface DropdownMenuProps {
     isOpen: boolean;
+    setIsOpen: (isOpen: boolean) => void;
 };
 
-const DropDownMenu = ({ isOpen }: DropdownMenuProps) => {
+const DropDownMenu = ({ isOpen,setIsOpen }: DropdownMenuProps) => {
     return (
         <DropdownMenuContainer $isOpen={isOpen}>
             <div className='content'>
@@ -18,7 +19,7 @@ const DropDownMenu = ({ isOpen }: DropdownMenuProps) => {
                         <SectionTitle href={`./documentation#${section.title}`}>{section.title}</SectionTitle>
                         <div className='options'>
                             {section.elements.map((element) =>
-                                <Tag href={`./documentation#${element}`} key={element}>{element}</Tag>
+                                <Tag href={`./documentation#${element}`} key={element} onClick={()=>setIsOpen(!isOpen)}>{element}</Tag>
                             )}
                         </div>
                     </div>)}

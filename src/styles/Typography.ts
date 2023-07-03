@@ -78,6 +78,7 @@ export const SectionTitle = styled.a<{ $active?: boolean } >`
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
+    scroll-margin-top: 30px;
     color: ${({ $active }) => ($active ? theme.colors.yellow : theme.colors.white)};
     @media (max-width: ${theme.breakpoints.sm}) {
           font-size: 20px;

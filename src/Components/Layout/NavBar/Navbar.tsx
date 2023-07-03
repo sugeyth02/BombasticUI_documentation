@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom'
 import HamburgerMenu from './HamburgerMenu/HamburgerMenu'
 import DropDownMenu from './DropDownMenu/DropDownMenu'
 
-const Navbar = ({transparent}) => {
+const Navbar = ({transparent=false }:{transparent?:boolean}) => {
   const { pathname } = useLocation();
   const [isOpen, setIsOpen] = React.useState(false);
   return (
@@ -21,7 +21,7 @@ const Navbar = ({transparent}) => {
       </div>
       <div className='navigation-mobile'>
         <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-        <DropDownMenu isOpen={isOpen} />
+        <DropDownMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </NavbarContainer>
   )
