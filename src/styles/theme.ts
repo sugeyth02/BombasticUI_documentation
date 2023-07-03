@@ -4,7 +4,9 @@ export const theme = {
         pink: '#D53B82',
         black: '#0F0F0F',
         lightBlack: '#171616',
-        white: '#FFFFFF'
+        white: '#FFFFFF',
+        gray:'#323232'
+
 
     },
     breakpoints: {

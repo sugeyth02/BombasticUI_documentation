@@ -6,7 +6,8 @@ export const FooterWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 8px 40px;
-
+  box-sizing: border-box;
+  border-top: 1px solid ${theme.colors.gray};
   img {
     height: 85px;
     width: 100px;

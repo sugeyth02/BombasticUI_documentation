@@ -6,11 +6,13 @@ export const NavbarContainer = styled.div<{$transparent:boolean}>`
   top: 0;
   left: 0;
   z-index: 10;
-  background-color: ${({ $transparent }) => ($transparent ? 'transparent' : theme.colors.black)};;
+  background-color: ${({ $transparent }) => ($transparent ? 'transparent' : theme.colors.black)};
   padding: 20px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
+  border-bottom: ${({ $transparent }) => ($transparent ? 'unset' : `1px solid ${theme.colors.gray}`)};
   .logo {
     display: flex;
     align-items: flex-end;
