@@ -1,3 +1,5 @@
+import { LibraryComponentsList } from './Components';
+
 export const data = [
     {
         title: 'Overview',
@@ -5,20 +7,6 @@ export const data = [
     },
     {
         title: 'Components',
-        elements: [
-            'Accordion',
-            'Avatar',
-            'CheckBox',
-            'ComboBox',
-            'Button',
-            'Pagination',
-            'SearchBar',
-            'Rating',
-            'InputText',
-            'Text',
-            'Title',
-            'ProgressBar',
-            'ImageCard',
-        ],
+        elements: LibraryComponentsList.map((element)=>element.id).sort(),
     },
 ];

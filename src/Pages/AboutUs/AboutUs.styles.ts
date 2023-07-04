@@ -20,6 +20,22 @@ img{
 
     p{
         max-width: 663px;
+        ul{
+            list-style: none;
+            padding-inline-start: unset;
+            li{
+                margin-left: unset;
+            }
+        }
+        a{
+            text-decoration: none;
+            color:${theme.colors.yellow}
+
+        }
+        a:hover{
+            cursor: pointer;
+            opacity: 0.8;
+        }
     }
 }
 @media (max-width: ${theme.breakpoints.lg}) {
