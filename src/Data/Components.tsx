@@ -21,7 +21,7 @@ export interface IComponent {
     id: 'Button',
     title: 'Button',
     code: `import { Button } from "bombastic-ui";
-        < Button
+  <Button
   bg="primary"
   label="Primary Ghost Button"
   small

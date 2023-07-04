@@ -16,7 +16,6 @@ const LibraryComponent = ({ component }: { component: IComponent }) => {
             <CopyBlock
                 text={code}
                 language='jsx'
-                showLineNumbers
                 theme={hybrid}
             />
             <Paragraph>Properties</Paragraph>
