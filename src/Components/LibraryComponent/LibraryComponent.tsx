@@ -13,11 +13,13 @@ const LibraryComponent = ({ component }: { component: IComponent }) => {
             <Title>{title}</Title>
             {Element}
             <Paragraph>Usage</Paragraph>
-            <CopyBlock
-                text={code}
-                language='jsx'
-                theme={hybrid}
-            />
+            <div className='code'>
+                <CopyBlock
+                    text={code}
+                    language='jsx'
+                    theme={hybrid}
+                />
+            </div>
             <Paragraph>Properties</Paragraph>
             <Table data={properties} />
         </ComponentWrapper>

@@ -1,5 +1,16 @@
-import React from 'react'
-import { Button as BombasticButton } from "bombastic-ui";
+import React from 'react';
+import {
+    Button as BombasticButton,
+    Title as BombasticTitle,
+    Accordion as BombasticAccordion,
+    Avatar as BombasticAvatar,
+    ImageCard as ImageCardBombastic,
+    ProgressBar as BombasticProgressBar,
+} from 'bombastic-ui';
+import { theme } from '../styles/theme';
+import InputTextBobastic from '../Components/InputTextBombastic/InputTextBobastic';
+import ComboBoxBombastic from '../Components/ComboBoxBombastic/ComboBoxBombastic';
+import PaginationBombastic from '../Components/PaginationBombastic/PaginationBombastic';
 
 export interface Iproperties {
     property: string;
@@ -14,28 +25,29 @@ export interface IComponent {
     title: string;
     code: string;
     Element?: React.ReactNode;
-    properties: Iproperties[]
-
+    properties: Iproperties[];
 }
- const Button: IComponent = {
+const Button: IComponent = {
     id: 'Button',
     title: 'Button',
     code: `import { Button } from "bombastic-ui";
-  <Button
+<Button
   bg="primary"
   label="Primary Ghost Button"
   small
   ghost
   onClick={() => console.log("hola")}
 />;`,
-    Element: <BombasticButton
-        bg="primary"
-        label="Primary Ghost Button"
-        // @ts-ignore
-        small
-        ghost
-        onClick={() => console.log("hola")}
-    />,
+    Element: (
+        <BombasticButton
+            bg='primary'
+            label='Primary Ghost Button'
+            // @ts-ignore
+            small
+            ghost
+            onClick={() => console.log('hola')}
+        />
+    ),
     properties: [
         {
             property: 'label',
@@ -56,8 +68,8 @@ export interface IComponent {
             description: 'Background color theme for Button component',
             type: 'string',
             default: 'primary',
-            allowedInputs: '"primary" |"secondary" |"ok" |"cancel" |"warning" |hexColors | rgbColors |',
-            
+            allowedInputs:
+                '"primary" |"secondary" |"ok" |"cancel" |"warning" |hexColors | rgbColors |',
         },
         {
             property: 'ghost',
@@ -65,7 +77,6 @@ export interface IComponent {
             type: 'boolean',
             default: 'false',
             allowedInputs: 'false|true',
-
         },
         {
             property: 'small',
@@ -73,7 +84,6 @@ export interface IComponent {
             type: 'boolean',
             default: 'false',
             allowedInputs: 'false|true',
-
         },
         {
             property: 'disabled',
@@ -81,16 +91,23 @@ export interface IComponent {
             type: 'boolean',
             default: 'false',
             allowedInputs: 'false|true',
-
         },
     ],
- };
+};
 const Title: IComponent = {
     id: 'Title',
     title: 'Title',
     code: `import { Title } from "bombastic-ui";
 
 <Title h={1} label="Hola a todos" mode="center" />;`,
+    Element: (
+        <BombasticTitle
+            h={1}
+            label='Title Example'
+            mode='start'
+            color={theme.colors.yellow}
+        />
+    ),
     properties: [
         {
             property: 'h ',
@@ -112,7 +129,6 @@ const Title: IComponent = {
             type: 'boolean ',
             default: 'false',
             allowedInputs: 'false|true',
-
         },
         {
             property: 'underlined',
@@ -120,7 +136,6 @@ const Title: IComponent = {
             type: 'boolean ',
             default: 'false',
             allowedInputs: 'false|true',
-
         },
         {
             property: 'strong',
@@ -128,7 +143,6 @@ const Title: IComponent = {
             type: 'boolean ',
             default: 'true',
             allowedInputs: 'false|true',
-
         },
         {
             property: 'mode',
@@ -136,15 +150,14 @@ const Title: IComponent = {
             type: ' string  ',
             default: '"left"',
             allowedInputs: '"left"|"right"|"center"|"justify"   ',
-
         },
         {
             property: 'color',
             description: 'Font color ',
             type: 'string|color inputs',
             default: ' "primary"',
-            allowedInputs: '"primary"|"secondary"|"ok"|"cancel"|"warning"|hex color|rgb color',
-
+            allowedInputs:
+                '"primary"|"secondary"|"ok"|"cancel"|"warning"|hex color|rgb color',
         },
         {
             property: 'onClick',
@@ -174,6 +187,7 @@ export default function MyPage() {
     />
   );
 }`,
+    Element: <InputTextBobastic />,
     properties: [
         {
             property: 'placeholder',
@@ -195,15 +209,14 @@ export default function MyPage() {
             type: 'any',
             default: '-',
             allowedInputs: 'any',
-
         },
         {
             property: 'color',
             description: 'Background color theme for borders',
             type: 'strings',
             default: '"primary"',
-            allowedInputs: '"primary"|"secondary"|"ok"|"cancel"|"warining"|hexColors|rgbColors ',
-
+            allowedInputs:
+                '"primary"|"secondary"|"ok"|"cancel"|"warining"|hexColors|rgbColors ',
         },
         {
             property: 'disabled',
@@ -211,7 +224,6 @@ export default function MyPage() {
             type: 'boolean',
             default: 'false',
             allowedInputs: 'false|true',
-
         },
         {
             property: 'labelColor',
@@ -219,7 +231,6 @@ export default function MyPage() {
             type: 'string',
             default: '"dark"',
             allowedInputs: '"dark"|"light"|hexColors|rgbColors',
-
         },
     ],
 };
@@ -235,6 +246,15 @@ const Accordion: IComponent = {
   }
   bg="light"
 />;`,
+    Element: (
+        <BombasticAccordion
+            title={'Lorem'}
+            description={
+                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum.'
+            }
+            bg='light'
+        />
+    ),
     properties: [
         {
             property: 'title',
@@ -245,7 +265,8 @@ const Accordion: IComponent = {
         },
         {
             property: 'description',
-            description: 'Hidden text that appears when Accordion component is clicked',
+            description:
+                'Hidden text that appears when Accordion component is clicked',
             type: 'string',
             default: '"This is an example of paragraph"',
             allowedInputs: 'strings ',
@@ -266,7 +287,7 @@ const ComboBox: IComponent = {
 import { useState } from "react";
 
 const options = [
-  { label: "pizza", value: 1 },
+  { label: "pizza", value: "pizza" },
   { label: "hamburger", value: "hamburger" },
   { label: "tacos", value: "tacos" },
 ];
@@ -275,10 +296,9 @@ export default function MyPage(){
     const [comboBoxValue, setComboBoxValue] = useState("")
 
     return(
-        ...
         <ComboBox theme="light" options={options} onChange={setComboBoxValue} />
-        ...
     );`,
+    Element: <ComboBoxBombastic />,
     properties: [
         {
             property: 'theme',
@@ -289,7 +309,8 @@ export default function MyPage(){
         },
         {
             property: 'themeColor',
-            description: 'Overwrite the default colors provided to make a custom component',
+            description:
+                'Overwrite the default colors provided to make a custom component',
             type: 'string',
             default: '""',
             allowedInputs: 'hexColors|rgbColors',
@@ -303,7 +324,8 @@ export default function MyPage(){
         },
         {
             property: 'labelBgColor',
-            description: 'When the placeholder is focus, it moves to the top of the input to act like a label. This property changes the background color to make a transparent effect between the borders and background page.',
+            description:
+                'When the placeholder is focus, it moves to the top of the input to act like a label. This property changes the background color to make a transparent effect between the borders and background page.',
             type: 'string',
             default: '""',
             allowedInputs: 'hexColors|regColors',
@@ -337,6 +359,13 @@ const Avatar: IComponent = {
 
 //Avatar without image
 <Avatar letter="CC" pointer />`,
+    Element: (
+        <BombasticAvatar
+            alt='example'
+            src='https://target.scene7.com/is/image/Target/GUEST_16a613aa-90af-4631-8f8c-9dfe6d079d6a'
+            pointer
+        />
+    ),
     properties: [
         {
             property: 'alt',
@@ -396,12 +425,22 @@ const ImageCard: IComponent = {
 
 <ImageCard
   title="Titulo"
-  text="Este es mi texto, la verdad super chivo"
+  text="Este es mi texto"
   titleButton="Ver mas"
-  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHZAq08u4YaR0Jsu2CgeptdxC74y-9QEeFYEAb6YHP&s"
+  src="https://encrypted-tbn0.gstatic.com/imagess"
   alt="alt image"
   theme="light"
 />`,
+    Element: (
+        <ImageCardBombastic
+            title='Titulo'
+            text='Este es mi texto, la verdad super chivo'
+            titleButton='Ver mas'
+            src='https://nationaltoday.com/wp-content/uploads/2020/05/star-wars-day-1200x834.jpg'
+            alt='alt image'
+            theme='light'
+        />
+    ),
     properties: [
         {
             property: 'title',
@@ -460,6 +499,7 @@ const ProgressBar: IComponent = {
     code: `import { ProgressBar } from "bombastic-ui";
 
 <ProgressBar width="76%" bgColor="green" />;`,
+    Element: <BombasticProgressBar width="50%" bgColor="green" />,
     properties: [
         {
             property: 'width',
@@ -488,11 +528,10 @@ export default function MyPage() {
     const [pagination, setPagination] = useState("")
 
     return(
-    ...
     <Pagination total={10} onChange={setPagination} page={pagination} />;
-    ...
     )
 };`,
+    Element: <PaginationBombastic />,
     properties: [
         {
             property: 'width',
@@ -511,6 +550,14 @@ export default function MyPage() {
     ],
 };
 
-
-export const LibraryComponentsList = [Accordion, Avatar, ComboBox, Button, Pagination, InputText, Title, ProgressBar, ImageCard].sort((a, b) =>
-    a.id.localeCompare(b.id));
+export const LibraryComponentsList = [
+    Accordion,
+    Avatar,
+    ComboBox,
+    Button,
+    Pagination,
+    InputText,
+    Title,
+    ProgressBar,
+    ImageCard,
+].sort((a, b) => a.id.localeCompare(b.id));

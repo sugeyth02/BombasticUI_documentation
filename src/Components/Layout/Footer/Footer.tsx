@@ -8,7 +8,7 @@ const Footer = () => {
       <FooterWrapper>
           <img src={BombasticLogo} />
           <p>CodigoSaurios@{new Date().getFullYear()}</p>
-          <NavigationTag href='mailto:00143619@uca.edu.sv'>Contact Us</NavigationTag>
+      <NavigationTag href='mailto:uibombastic@gmail.com'>Contact Us</NavigationTag>
     </FooterWrapper>
   )
 }
