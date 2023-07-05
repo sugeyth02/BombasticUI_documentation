@@ -12,7 +12,7 @@ const LibraryComponent = ({ component }: { component: IComponent }) => {
         <ComponentWrapper className='component' id={id}>
             <Title>{title}</Title>
             {Element}
-            <Paragraph>Usage</Paragraph>
+            <Paragraph className='usage'>Usage</Paragraph>
             <div className='code'>
                 <CopyBlock
                     text={code}

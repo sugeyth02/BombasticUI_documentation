@@ -16,7 +16,7 @@ const DropDownMenu = ({ isOpen,setIsOpen }: DropdownMenuProps) => {
                 <NavigationTag href='/documentation'>Documentation</NavigationTag>
                 <div className='documentation'>
                     {data.map((section) => <div className='section' key={section.title}>
-                        <SectionTitle href={`./documentation#${section.title}`}>{section.title}</SectionTitle>
+                        <SectionTitle href={`./documentation#${section.title}`} onClick={() => setIsOpen(!isOpen)}>{section.title}</SectionTitle>
                         <div className='options'>
                             {section.elements.map((element) =>
                                 <Tag href={`./documentation#${element}`} key={element} onClick={()=>setIsOpen(!isOpen)}>{element}</Tag>

@@ -5,6 +5,7 @@ import SideBar from '../../Components/SideBar/SideBar';
 import LibraryComponent from '../../Components/LibraryComponent/LibraryComponent';
 import { LibraryComponentsList } from '../../Data/Components';
 import { Paragraph, PrimaryTitle, Title } from '../../styles/Typography';
+import { CopyBlock, hybrid } from 'react-code-blocks';
 
 const Documentation = () => {
   return (
@@ -27,6 +28,26 @@ const Documentation = () => {
 
                 <p>Get Bombastic-ui on npm at <a href="https://www.npmjs.com/package/bombastic-ui">https://www.npmjs.com/package/bombastic-ui</a></p>
               </Paragraph>
+            </div>
+            <div id='Getting started' className='installation'>
+              <Title>Getting started</Title>
+              <Paragraph> You can install <b>bombastic-ui</b> by running the following code on your project</Paragraph>
+              <Paragraph>Using npm</Paragraph>
+              <CopyBlock
+                text={'npm install bombastic-ui --save'}
+                language='bash'
+                theme={hybrid}
+                codeBlock={true}
+                showLine
+              />
+              <Paragraph>Using yarn</Paragraph>
+              <CopyBlock
+                text={'yarn add bombastic-ui'}
+                language='bash'
+                theme={hybrid}
+                codeBlock={true}
+              />
+
             </div>
           </div>
           <div className='components' id='Components'>

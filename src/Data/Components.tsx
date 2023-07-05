@@ -6,11 +6,15 @@ import {
     Avatar as BombasticAvatar,
     ImageCard as ImageCardBombastic,
     ProgressBar as BombasticProgressBar,
+    Text as TextBombastic,
 } from 'bombastic-ui';
 import { theme } from '../styles/theme';
 import InputTextBobastic from '../Components/InputTextBombastic/InputTextBobastic';
 import ComboBoxBombastic from '../Components/ComboBoxBombastic/ComboBoxBombastic';
 import PaginationBombastic from '../Components/PaginationBombastic/PaginationBombastic';
+import RatingBombastic from '../Components/RatingBombastic/RatingBombastic';
+import SearchBarBombastic from '../Components/SearchBarBombastic/SearchBarBombastic';
+import CheckBoxBombastic from '../Components/CheckBoxBombastic/CheckBoxBombastic';
 
 export interface Iproperties {
     property: string;
@@ -549,6 +553,309 @@ export default function MyPage() {
         },
     ],
 };
+const Rating: IComponent = {
+    id: 'Rating',
+    title: 'Rating',
+    code: `import { Rating } from "bombastic-ui";
+
+<Rating
+  color="warning"
+  disabled
+  readonly
+  value={valueState}
+  onChange={(e) => setValueState(e.value)}
+/>;`,
+    Element: <RatingBombastic />,
+    properties: [
+        {
+            property: 'color',
+            description: 'Property that changes color of the text',
+            type: 'String',
+            default: '"primary"',
+            allowedInputs: '"primary"| "secondary"| "ok" | "cancel"| "warning"',
+        },
+        {
+            property: 'readOnly',
+            description: 'Property that allows to write or just read',
+            type: 'Boolean',
+            default: 'False',
+            allowedInputs: 'true|false',
+        },
+        {
+            property: 'disabled',
+            description: 'Property the rating is avilable to the user',
+            type: 'Boolean',
+            default: 'False',
+            allowedInputs: 'true|false',
+        },
+        {
+            property: 'value',
+            description: 'Property that contains the number that will appear on rating',
+            type: 'any',
+            default: '0',
+            allowedInputs: 'Int',
+        },
+        {
+            property: 'OnChange',
+            description: 'Function that allows to make changes to rating component',
+            type: 'Function',
+            default: '() => void',
+            allowedInputs: 'Functions',
+        },
+    ],
+};
+const Text: IComponent = {
+    id: 'Text',
+    title: 'Text',
+    code: `import { Text } from "bombastic-ui";
+
+<Text
+label="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+size={ 1}
+mode="center"
+color="primary"
+    />`,
+    Element: <TextBombastic
+        label="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+        size={1}
+        mode="center"
+        color="secondary"
+    /> ,
+    properties: [
+        {
+            property: 'italic',
+            description: "Italic style for text",
+            type: "boolean",
+            default: 'false',
+            allowedInputs: "false|true"
+
+        },
+        {
+            property: 'underlined',
+            description: 'Underlined style for text',
+            type: "boolean",
+            default: 'false',
+            allowedInputs: "false|true"
+        },
+        {
+            property: 'onClick',
+            description: 'On click handler for text',
+            type: '(event:any)=>void',
+            default: '-',
+            allowedInputs: '(event:any)=>void',
+        },
+        {
+            property: 'color',
+            description: 'Color variations for text',
+            type: 'string',
+            default: '"primary"',
+            allowedInputs: '"primary"|"secondary"|"ok"|"cancel"|"warning"|hexColors|rgbColors',
+        },
+        {
+            property: 'strong',
+            description: 'Make more strong the weight of text',
+            type: 'boolean',
+            default: 'false',
+            allowedInputs: 'false|true',
+        },
+        {
+            property: "label",
+            description: "Label text",
+            type: "string",
+            default: "Text",
+            allowedInputs: "strings"
+        },
+        {
+            property: "size",
+            description: "Size of the text",
+            type: "number",
+            default: "1",
+            allowedInputs: "1|2"
+        },
+        {
+            property: "mode",
+            description: "Mode of position by text",
+            type: "string",
+            default: "left",
+            allowedInputs: "left|right|center|justify"
+        }
+    ],
+};
+const SearchBar: IComponent = {
+    id: 'SearchBar',
+    title: 'SearchBar',
+    code: `import { SearchBar } from "bombastic-ui";
+<SearchBar
+color="primary"
+disabled={ false}
+onChange={(e) => setValueState(e.value)}
+onSubmit={(e) => submit(e.value)}
+/>;`,
+    Element: <SearchBarBombastic />,
+    properties: [
+        {
+            property: "strong",
+            description: "Make more strong the weight of text",
+            type: "boolean",
+            default: "false",
+            allowedInputs: "false|true"
+        },
+        {
+            property: "label",
+            description: "Label text",
+            type: "string",
+            default: "Text",
+            allowedInputs: "strings"
+        },
+        {
+            property: "size",
+            description: "Size of the text",
+            type: "number",
+            default: "1",
+            allowedInputs: "1|2"
+        },
+        {
+            property: "mode",
+            description: "Mode of position by text",
+            type: "string",
+            default: "left",
+            allowedInputs: "left|right|center|justify"
+        },
+        {
+            property: "color",
+            description: "Property that changes the color of the Search Bar component",
+            type: "string",
+            default: "primary",
+            allowedInputs:' " "primary" | "secondary" | "ok" | "cancel" | "warning" '
+        },
+        {
+            property: "disabled",
+            description: "Property that disables the searchbar so user can't search",
+            type: "boolean",
+            default: "false",
+            allowedInputs: "true | false"
+        },
+        {
+            property: "onChange",
+            description: "Function that handles the response of what the user searched when typing",
+            type: "Function",
+            default: "(e: any) => void",
+            allowedInputs: "Function"
+        },
+        {
+            property: "onSubmit",
+            description: "Function that handles the response of what the user searched when entered",
+            type: "Function",
+            default: "(e: any) => void",
+            allowedInputs: "Function"
+        }
+    ],
+};
+
+const CheckBox: IComponent = {
+    id: 'CheckBox',
+    title: 'CheckBox',
+    code: `import { CheckBox } from "bombastic-ui";
+
+<Checkbox
+checked={valueState}
+disabled={false}
+ghost={false}
+color="primary"
+onChange={() => setValueState(!valueState)}
+/>;`,
+    Element: <CheckBoxBombastic/>,
+    properties: [
+        {
+            property: "strong",
+            description: "Make more strong the weight of text",
+            type: "boolean",
+            default: "false",
+            allowedInputs: "false|true"
+        },
+        {
+            property: "label",
+            description: "Label text",
+            type: "string",
+            default: "Text",
+            allowedInputs: "strings"
+        },
+        {
+            property: "size",
+            description: "Size of the text",
+            type: "number",
+            default: "1",
+            allowedInputs: "1|2"
+        },
+        {
+            property: "mode",
+            description: "Mode of position by text",
+            type: "string",
+            default: "left",
+            allowedInputs: "left|right|center|justify"
+        },
+        {
+            property: "color",
+            description: "Property that changes the color of the Search Bar component",
+            type: "string",
+            default: "primary",
+            allowedInputs: '["primary", "secondary", "ok", "cancel", "warning"] | hexColors | rgbColors'
+},
+        {
+            property: "disabled",
+            description: "Property that disables the searchbar so user can't search",
+            type: "boolean",
+            default: "false",
+            allowedInputs: "[true, false]"
+        },
+        {
+            property: "onChange",
+            description: "Function that handles the response of what the user searched when typing",
+            type: "Function",
+            default: "(e: any) => void",
+            allowedInputs: "Function"
+        },
+        {
+            property: "onSubmit",
+            description: "Function that handles the response of what the user searched when entered",
+            type: "Function",
+            default: "(e: any) => void",
+            allowedInputs: "Function"
+        },
+        {
+            property: "checked",
+            description: "Property that tells you if a box has been checked or not",
+            type: "boolean",
+            default: "false",
+            allowedInputs: "[true, false]"
+        },
+        {
+            property: "ghost",
+            description: "Property that changes the visibility of the component",
+            type: "boolean",
+            default: "false",
+            allowedInputs: "[true, false]"
+        },
+        {
+            property: "color",
+            description: "Property that changes color of the checkbox",
+            type: "string",
+            default: "primary",
+            allowedInputs: '["primary", "secondary", "ok", "cancel", "warning"] | hexColors | rgbColors'
+},
+        {
+            property: "onChange",
+            description: "Function to checkbox component dispatch",
+            type: "Function",
+            default: "() => void",
+            allowedInputs: "Functions"
+        }
+
+    ],
+};
+
+
+
 
 export const LibraryComponentsList = [
     Accordion,
@@ -560,4 +867,8 @@ export const LibraryComponentsList = [
     Title,
     ProgressBar,
     ImageCard,
+    Rating,
+    Text,
+    SearchBar,
+    CheckBox,
 ].sort((a, b) => a.id.localeCompare(b.id));
